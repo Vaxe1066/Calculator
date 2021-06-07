@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="#">
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+
+<style>
+  html, body{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+          "dis dis dis dis"
+          "ac pm pct divide"
+          "sev eig nin mult"
+          "fou fiv six minus"
+          "one two thr plus"
+          "zer zer dec eq"; 
+    justify-content: center;
+    align-content: center;
+    width: 25vw;
+    height: 50vh;
+    border:10px solid black;
+    margin: 10vw 25vw 25vw 35vw;
+  }
+
+
+
+  input:hover{
+    /*transform:scale(1.1);*/
+    opacity: 0.7;
+    cursor:pointer;
+  }
+
+  .display{
+    grid-area: dis;
+    /*width: 100%;
+    border: 1px solid black;*/
+    background-color: lightgray;
+    
+  }
+
+  .displayBut{
+    font-family:sans-serif;
+    font-size: 40px;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    
+  }
+
+
+  .ac{
+    grid-area: ac;
+  }
+  input{
+    font-family:sans-serif;
+    font-size: 26px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .zero {
+    grid-area: zer;
+  }
+
+  .sevBut, .eigBut, .ninBut, .fouBut, .fivBut, .sixBut,.oneBut, .twoBut, .thrBut, .zeroBut, .dcBut  {
+    background-color: lightgreen;
+
+  }
+
+  .divideBut, .multBut, .minusBut, .plusBut, .eqBut {
+    background-color: orange;
+
+  }
+
+  .acBut, .pctBut, .pmBut{
+    background-color: lightblue;
+  }
+
+
+</style>
+
+<body>
+
+  <div id="container" class="container">
+    <div id = "display" class="display">
+      <p id="displayBut" class="displayBut"></p>
+    </div>
+    <div id = "ac" class="ac">
+      <input id="acBut" class="acBut" type="button" value=AC>
+    </div>
+    <div id = "pm" class="pm">
+      <input id="pmBut" class="pmBut" type="button" text='+/-' value="+/-">
+    </div>
+    <div id = "pct" class="pct">
+      <input id="pctBut" class="pctBut" type="button" value="%">
+    </div>
+    <div id = "divide" class="divide">
+      <input id="divideBut" class="divideBut" type="button" value="/">
+    </div>
+    <div id = "seven" class="seven">
+      <input id="sevBut" class="sevBut" type="button" value="7">
+    </div>
+    <div id = "8" class="8">
+      <input id="eigBut" class="eigBut" type="button" value="8">
+    </div>
+    <div id = "9" class="9">
+      <input id="ninBut" class="ninBut" type="button" value="9">
+    </div>    
+    <div id = "mult" class="mult">
+      <input id="multBut" class="multBut" type="button" value="*">
+    </div>   
+     <div id = "4" class="4">
+      <input id="fouBut" class="fouBut" type="button" value="4">
+    </div> 
+       <div id = "5" class="5">
+      <input id="fivBut" class="fivBut" type="button" value="5">
+    </div>   
+     <div id = "6" class="6">
+      <input id="sixBut" class="sixBut" type="button" value="6">
+    </div>   
+     <div id = "minus" class="minus">
+      <input id="minusBut" class="minusBut" type="button" value="-">
+    </div>   
+     <div id = "1" class="1">
+      <input id="oneBut" class="oneBut" type="button" value="1">
+    </div>  
+      <div id = "2" class="2">
+      <input id="twoBut" class="twoBut" type="button" value="2">
+    </div>  
+      <div id = "3" class="3">
+      <input id="thrBut" class="thrBut" type="button" value="3">
+    </div>  
+      <div id = "plus" class="plus">
+      <input id="plusBut" class="plusBut" type="button" value="+">
+    </div>   
+     <div id = "zero" class="zero">
+      <input id="zeroBut" class="zeroBut" type="button" value="0">
+    </div>  
+      <div id = "dc" class="dc">
+      <input id="dcBut" class="dcBut" type="button" value=".">
+    </div>   
+     <div id = "eq" class="eq">
+      <input id="eqBut" class="eqBut" type="button" value="=">
+    </div>   
+   
+    
+
+
+
+
+  </div>
+
+</body>
+
+<script src=script.js></script>
+
+
+</html>
